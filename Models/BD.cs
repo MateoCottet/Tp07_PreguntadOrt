@@ -17,8 +17,24 @@ public static class BD
     {
         using(SqlConnection db = new SqlConnection(_connectionString))
         {
-            string sql = "exec [ObtenerRespuestas] @idPregunta";
+            string sql = "exec [ObtenerRespuestas] @idpregunta";
             return db.Query<Pregunta>(sql, new{idpregunta = IdPregunta});
+        }
+    }
+      public static Pregunta obtenerCategorias(int IdCtegoria)
+    {
+        using(SqlConnection db = new SqlConnection(_connectionString))
+        {
+            string sql = "exec [obtenerCategorias] @idcategoria";
+            return db.Query<Pregunta>(sql, new{idctegoria = IdCtegoria});
+        }
+    }
+      public static Pregunta obtenerDificultades(int IdDificultad)
+    {
+        using(SqlConnection db = new SqlConnection(_connectionString))
+        {
+            string sql = "exec [obtenerDificultades] @idcategoria";
+            return db.Query<Pregunta>(sql, new{iddificultad = IdDificultad});
         }
     }
 }

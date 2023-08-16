@@ -1,0 +1,8 @@
+C:\Users\47434207\Desktop\Nueva carpeta\Tp07_PreguntadOrt\obj\Debug\net7.0\PreguntadOrt.csproj.AssemblyReference.cache
+C:\Users\47434207\Desktop\Nueva carpeta\Tp07_PreguntadOrt\obj\Debug\net7.0\PreguntadOrt.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\47434207\Desktop\Nueva carpeta\Tp07_PreguntadOrt\obj\Debug\net7.0\PreguntadOrt.AssemblyInfoInputs.cache
+C:\Users\47434207\Desktop\Nueva carpeta\Tp07_PreguntadOrt\obj\Debug\net7.0\PreguntadOrt.AssemblyInfo.cs
+C:\Users\47434207\Desktop\Nueva carpeta\Tp07_PreguntadOrt\obj\Debug\net7.0\PreguntadOrt.csproj.CoreCompileInputs.cache
+C:\Users\47434207\Desktop\Nueva carpeta\Tp07_PreguntadOrt\obj\Debug\net7.0\PreguntadOrt.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\47434207\Desktop\Nueva carpeta\Tp07_PreguntadOrt\obj\Debug\net7.0\PreguntadOrt.RazorAssemblyInfo.cache
+C:\Users\47434207\Desktop\Nueva carpeta\Tp07_PreguntadOrt\obj\Debug\net7.0\PreguntadOrt.RazorAssemblyInfo.cs
