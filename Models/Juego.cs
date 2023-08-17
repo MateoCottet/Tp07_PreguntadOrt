@@ -1,15 +1,15 @@
 public static class Juego{
-    public static string  _username{get; private set;}
-    public static int  _PuntajeActual{get; private set;}
-    public static int  _CantidadPreguntasCorrectas{get; private set;}
-    public static list<pregunta> preguntas{get; private set;} = new list<pregunta>();
-    public static list<respuesta> respuestas{get; private set;} = new list<respuesta>();
+    public static string  _username{get; set;}
+    public static int  _PuntajeActual{get; set;}
+    public static int  _CantidadPreguntasCorrectas{get; set;}
+    public static int _CantidadPreguntas {get; set;}
+    public static List<Preguntas> _preguntas{get; set;} = new List<Preguntas>();
+    public static List<Respuestas> _respuestas{get; set;} = new List<Respuestas>();
 
-    public static void inicializarJuego(){
+    public static void InicializarJuego(){
         _username = "";
-        dificultad = 1;
-        categoria = 1;
-        _puntajeActual = 0;
+        _PuntajeActual = 0;
+        _CantidadPreguntas = 0;
         _CantidadPreguntasCorrectas = 0;
     }
     public static List<Categoria> ObtenerCategorias(){
@@ -23,10 +23,10 @@ public static class Juego{
         _preguntas = BD.ObtenerPreguntas(dificultad, categoria);
         _respuestas = BD.ObtenerRespuestas(_preguntas);
     }
-    public static pregunta ObtenerProximaPregunta8(){
+    public static Preguntas ObtenerProximaPregunta(){
         if(_preguntas.Count != 0){
-            random random=new Random();
-            int numAleatorio=random.Next(0, _preguntas.Count);
+            int numAleatorio = 0;
+            // FALTA HACER NUMERO ALEATORIO BIEN, EL RANDOM ESTABA MAL HECHO
             return _preguntas[numAleatorio];
         }
         else{
@@ -34,21 +34,20 @@ public static class Juego{
         }
     }
 
-    public static List<Respuesta> ObtenerProximasRespuestas(int idPregunta){
-        List<Respuesta> respuestas = BD.ObtenerRespuestas(_preguntas);
-        List<Respuesta> respuestas = ne List<Respuesta>();
-        foreach(var item in respuestas)
+    public static List<Respuestas> ObtenerProximasRespuestas(int idPregunta){
+        List<Respuestas> resp = new List<Respuestas>();
+        foreach(Respuestas item in _respuestas)
         {
             if(item.IdPregunta == idPregunta){
-                respuesta.Add(item);
+                resp.Add(item);
             }
         }
-        return respuesta;
+        return resp;
 
     }
     
     public static bool VerificarRespuesta(int idPregunta, int idRespuesta){
-        Pregunta pregunta = null;
+        Preguntas pregunta = new Preguntas();
         foreach(var item in _preguntas)
         {
             if(item.IdPregunta == idPregunta){
@@ -59,8 +58,8 @@ public static class Juego{
         {
             if(item.IdPregunta == idPregunta){
                 if(item.Opcion == idRespuesta && item.Correcta == true){
-                    _puntajeActual+=5;
-                    cantidadPreguntasCorrectas+=1;
+                    _PuntajeActual+=5;
+                    _CantidadPreguntasCorrectas+=1;
                     _preguntas.Remove(pregunta);
                     _respuestas.Remove(item);
                     return true;
