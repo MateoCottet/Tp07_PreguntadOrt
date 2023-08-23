@@ -1,11 +1,14 @@
-public class Respuestas {
+public class Respuesta {
     public int IdRespuestas { set;  get;}
     public int IdPregunta { set;  get;}
     public int Opcion { set;  get;}
     public string Contenido { set;  get;}
     public bool Correcta { set;  get;}
     public string Foto { set;  get;}
-    public Respuestas(int idRespuestas, int idPregunta, int opcion, string contenido, bool correcta, string foto ) {
+    public Respuesta() {
+        
+    }
+    public Respuesta(int idRespuestas, int idPregunta, int opcion, string contenido, bool correcta, string foto ) {
         IdRespuestas = idRespuestas;
         IdPregunta = idPregunta;
         Opcion = opcion;

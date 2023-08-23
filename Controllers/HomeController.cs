@@ -26,7 +26,7 @@ public class HomeController : Controller
         return View("Index");
     }
     public IActionResult Jugar() {
-        Preguntas preg = Juego.ObtenerProximaPregunta();
+        Pregunta preg = Juego.ObtenerProximaPregunta();
         if(preg == null) {
             return View("Fin");
         }
@@ -35,25 +35,16 @@ public class HomeController : Controller
         return View("Jugar");
     }
     public IActionResult VerificarRespuesta(int idPregunta, int idRespuesta,string enunciado, string respuesta) {
-        ViewBag.Correcta = Juego.VerificarRespuesta(idPregunta,idRespuesta);
+        bool Correcta = Juego.VerificarRespuesta(idPregunta,idRespuesta);
         ViewBag.IdPregunta = idPregunta;
         ViewBag.Pregunta = enunciado;
         ViewBag.Respuesta = respuesta;
-        ViewBag.Progreso = Juego._CantidadPreguntasCorrectas;
-        ViewBag.Maximo = Juego._CantidadPreguntas;
-        return View("Respuesta");
-    }
-        public IActionResult Reiniciar(int idPregunta) {
-        List<Preguntas> pregs = BD.ObtenerPreguntas(1,1); // FALTA HACER QUE SE PIDAN LAS PREGUNTAS POR CATEGORIA Y DIFICULTAD
-        Preguntas preg = new Preguntas();
-        foreach(var i in pregs) {
-            if (i.IdPregunta == idPregunta) {
-                preg = i;
-            }
+        if (Correcta) {
+        return View("Correcta");
+        } else {
+        return View("Incorrecta");
         }
-        ViewBag.Pregunta = preg;
-        ViewBag.Respuestas = Juego.ObtenerProximasRespuestas(preg.IdPregunta);
-        return View("Jugar");
+
     }
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()

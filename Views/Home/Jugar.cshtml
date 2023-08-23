@@ -1,0 +1,13 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+<section class="juego">
+<h1>@ViewBag.Pregunta.Enunciado</h1>
+<img src="@ViewBag.Pregunta.Foto" alt="" width="30%">
+
+<div>
+@foreach(var item in @ViewBag.Respuestas) {
+<a href='@Url.Action("VerificarRespuesta","Home", new {idPregunta=@ViewBag.Pregunta.IdPregunta, idRespuesta = @item.Opcion, enunciado =@ViewBag.Pregunta.Enunciado, respuesta = @item.Contenido})'>@item.Contenido</a>
+}
+</div>
+</section>

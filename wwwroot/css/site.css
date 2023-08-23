@@ -20,3 +20,26 @@ html {
 body {
   margin-bottom: 60px;
 }
+.juego {
+  background-color: rgb(190, 6, 181);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.juego h1 {
+  color: white;
+}
+.juego div {
+  display: flex;
+
+}
+.juego div a {
+  cursor: pointer;
+  padding: 25px 50px;
+  background-color: white;
+  margin: 5px;
+  text-decoration: none;
+  color: black;
+}
