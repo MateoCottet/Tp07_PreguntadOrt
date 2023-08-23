@@ -27,6 +27,7 @@ public class HomeController : Controller
     }
     public IActionResult Jugar() {
         Pregunta preg = Juego.ObtenerProximaPregunta();
+        ViewBag.Nombre = Juego._username;
         if(preg == null) {
             return View("Fin");
         }

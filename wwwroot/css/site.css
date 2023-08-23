@@ -19,27 +19,67 @@ html {
 
 body {
   margin-bottom: 60px;
+  
+}
+.Index
+{
+  background-image: url(https://i.blogs.es/c4dda1/preguntados-que-es-donde-jugarlo-y-mas-acerca-del-fenomeno-nacido-en-argentina/1366_2000.jpeg);
+  background-size: 100%;
+}
+.Index h1
+{
+color: white;
+}
+.Jugar{
+  background-image: url(https://i.pinimg.com/originals/4e/55/07/4e5507218f1a9d904c9299598b0f596d.jpg);
+  background-size: 100%;
 }
 .juego {
   background-color: rgb(190, 6, 181);
-  width: 100%;
+  width:  100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-top: 10%;
+  border-radius: 50px;
 }
 .juego h1 {
   color: white;
 }
 .juego div {
   display: flex;
-
+  flex-direction: column;
+  justify-content: center;
+  width: 80%;
+text-align: center;
 }
+
 .juego div a {
   cursor: pointer;
-  padding: 25px 50px;
+  padding: 15px 50px;
   background-color: white;
-  margin: 5px;
+  border-radius: 10px;
+  margin: 10px;
   text-decoration: none;
   color: black;
+  font-size: 40px;
+}
+.Correcta h1
+{
+  font-size: 200px;
+}
+.Fcorrecta{
+  background-color: greenyellow;
+}
+.btn{
+  margin-top: 30%;
+  font-size: 50px;
+}
+.Incorrecta h1
+{
+  font-size: 200px;
+}
+.Fincorrecta{
+  background-color: rgb(255, 0, 0);
 }
