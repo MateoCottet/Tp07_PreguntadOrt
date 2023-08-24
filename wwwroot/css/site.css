@@ -19,16 +19,17 @@ html {
 
 body {
   margin-bottom: 60px;
-  
+  background-color:rgb(210, 165, 252);
 }
 .Index
 {
-  background-image: url(https://i.blogs.es/c4dda1/preguntados-que-es-donde-jugarlo-y-mas-acerca-del-fenomeno-nacido-en-argentina/1366_2000.jpeg);
   background-size: 100%;
+  background-color: rgb(210, 165, 252);
 }
 .Index h1
 {
-color: white;
+  font-weight: 600;
+  color: black;
 }
 .Jugar{
   background-image: url(https://i.pinimg.com/originals/4e/55/07/4e5507218f1a9d904c9299598b0f596d.jpg);
@@ -83,3 +84,17 @@ text-align: center;
 .Fincorrecta{
   background-color: rgb(255, 0, 0);
 }
+
+ /* Configurar juego  */
+
+.conf
+{
+  display: flex;
+  flex-direction: column;
+}
+
+.inp
+{
+  margin-top: 50px;
+}
+

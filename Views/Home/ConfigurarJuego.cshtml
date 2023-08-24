@@ -2,9 +2,10 @@
     ViewData["Title"] = "ConfigurarJuego";
 }
     <form method="post" action='@Url.Action("CambiarConfig","Home")'>
-        <h2>Nombre de usuario</h2>
+      <div class = "conf">
+        <h2>Nombre de usuario:</h2>
         <input type="text" name="_username">
-        <h2>Dificultad</h2>
+        <h2>Dificultad:</h2>
         <select name="dificultad">
             <option value="1">Dificil</option>
             <option value="2">Intermedio</option>
@@ -12,7 +13,7 @@
             <option value="-1">Todas</option>
         </select>
 
-        <h2>Categoria</h2>
+        <h2>Categoria:</h2>
            <select name="categoria">
             <option value="8">Entretenimiento</option>
             <option value="7">Arte</option>
@@ -21,5 +22,8 @@
             <option value="6">Historia</option>
             <option value="9">Ciencias</option>
         </select>
-        <button type="submit" style="background-image: url('/img/arrow.png');"></button>
+        <div class = "inp">
+          <input type="submit" value="Enviar">
+        </div>
+       </div> 
     </form>
