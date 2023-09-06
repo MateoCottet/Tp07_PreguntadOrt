@@ -17,17 +17,17 @@
     <header>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-          <a class="navbar-brand" href="index.html"><img src="./img/Logo.png" alt="" width="100px" height="auto"></a>
+          <a class="navbar-brand" href='@Url.Action("Index","Home")'><img src="/img/Logo.png" alt="" width="100px" height="auto"></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link" href='@UrlAction("View, ConfigurarJuego")'>Config</a>
+                <a class="nav-link" href='@Url.Action("ConfigurarJuego", "Home")'>Config</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href='@UrlAction("ConfigurarJuego.cshtml")'>Jugar</a>
+                <a class="nav-link active" aria-current="page" href='@Url.Action("Jugar","Home")'>Jugar</a>
               </li>
            
              

@@ -19,7 +19,7 @@ public class HomeController : Controller
     }
     public IActionResult ConfigurarJuego() {
         Juego.InicializarJuego();
-        return View();
+        return View("ConfigurarJuego");
     }
     public IActionResult CambiarConfig(string _username, int dificultad, int categoria) {
         Juego.CargarPartida(_username,dificultad,categoria);
